@@ -349,7 +349,7 @@
                 const response = await fetch('./data.json?t=' + new Date().getTime());
                 const data = await response.json();
 
-                document.getElementById('last-updated').textContent = "기준일: " + data.last_updated + " (최근 6개월 이내 공고 기준) | 대상: 모듈러, 숙박, 생활관 등 지정 키워드";
+                document.getElementById('last-updated').textContent = "기준일: " + data.last_updated + " (최근 6개월 이내 공고 기준) | 대상: 모듈러 등 키워드 및 주요 공기업(LH, SH, GH, IH)";
 
                 renderCards(data.bids, 'bids-container');
                 renderCards(data.pre_specs, 'prespecs-container');
